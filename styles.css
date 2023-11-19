@@ -1,0 +1,170 @@
+body {
+
+    width: 100vw;
+  
+    height: 100vh;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    flex-direction: column;
+  
+    background-position: center;
+  
+    font-family: gill sans, sans-serif;
+  
+  }
+  
+  
+  
+  img#bg-img {
+  
+    opacity: 0.6;
+  
+    position: absolute;
+  
+    left: 0;
+  
+    top: 0;
+  
+    width: 100%;
+  
+    height: auto;
+  
+  }
+  
+  
+  
+  p {
+  
+    font-family: helvetica;
+  
+    font-size: 24px;
+  
+    text-align: center;
+  
+    margin: 25px;
+  
+  }
+  
+  
+  
+  p span.item {
+  
+    font-weight: bold;
+  
+  }
+  
+  
+  
+  .small {
+  
+    font-family: helvetica;
+  
+    font-size: 18px;
+  
+    text-align: center;
+  
+    margin: 25px;
+  
+  }
+  
+  
+  
+  button {
+  
+    background-color: #008CBA;
+  
+    border: none;
+  
+    color: white;
+  
+    padding: 15px 32px;
+  
+    text-align: center;
+  
+    font-size: 16px;
+  
+    margin: 0 auto;
+  
+  }
+  
+  div#socials a {
+    text-decoration: none;
+    font-size: xx-large;
+  }
+  
+  div.progress-bar-container {
+  
+    width: 80%;
+  
+    height: 20px;
+  
+    /* background-color: green; */
+  
+    border: solid black 2px;
+  
+    display: block;
+  
+    margin: 0 auto;
+  
+  }
+  
+  
+  
+  div.prog-bar {
+  
+    height: 20px;
+  
+    background-color: green;
+  
+  }
+  
+  
+  
+  button#restart-button {
+  
+    display: none;
+  
+    color: black;
+  
+  }
+  
+  
+  
+  /* CSS styles to position divs side by side */
+  
+  .outer-container {
+  
+    opacity: 0.9;
+  
+    text-align: center;
+  
+  }
+  
+  
+  
+  .container {
+  
+    display: flex; /* Use flexbox for layout */
+  
+    background-color: white;
+  
+  }
+  
+  
+  
+  .box {
+  
+    width: 50%; /* Set width to 50% for each box */
+  
+    border: 1px solid #000; /* Add borders for visibility */
+  
+    padding: 20px;
+  
+    box-sizing: border-box; /* Include padding in the width */
+  
+  }
