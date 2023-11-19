@@ -91,11 +91,48 @@ body {
     margin: 0 auto;
   
   }
+
   
   div#socials a {
     text-decoration: none;
     font-size: xx-large;
   }
+
+
+  .outer-container {
+  
+    opacity: 0.9;
+  
+    text-align: center;
+  
+  }
+  
+  .container {
+  
+    display: flex; /* Use flexbox for layout */
+    background-color: white;
+
+  }
+
+  /* CSS styles to position divs side by side */
+    
+  .box {
+  
+    width: 50%; /* Set width to 50% for each box */
+  
+    border: 1px solid #000; /* Add borders for visibility */
+  
+    padding: 20px;
+  
+    box-sizing: border-box; /* Include padding in the width */
+
+    position: relative;
+
+    height: 300px;
+  
+  }
+  
+  /* *** */
   
   div.progress-bar-container {
   
@@ -103,13 +140,15 @@ body {
   
     height: 20px;
   
-    /* background-color: green; */
-  
     border: solid black 2px;
   
     display: block;
-  
-    margin: 0 auto;
+
+    position: absolute;
+    
+    bottom: 0;
+    
+    margin-bottom: 20px;
   
   }
   
@@ -117,8 +156,7 @@ body {
   
   div.prog-bar {
   
-    height: 20px;
-  
+    height: 100%;
     background-color: green;
   
   }
@@ -130,41 +168,5 @@ body {
     display: none;
   
     color: black;
-  
-  }
-  
-  
-  
-  /* CSS styles to position divs side by side */
-  
-  .outer-container {
-  
-    opacity: 0.9;
-  
-    text-align: center;
-  
-  }
-  
-  
-  
-  .container {
-  
-    display: flex; /* Use flexbox for layout */
-  
-    background-color: white;
-  
-  }
-  
-  
-  
-  .box {
-  
-    width: 50%; /* Set width to 50% for each box */
-  
-    border: 1px solid #000; /* Add borders for visibility */
-  
-    padding: 20px;
-  
-    box-sizing: border-box; /* Include padding in the width */
   
   }
