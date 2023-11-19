@@ -76,9 +76,9 @@ body {
   
   button {
   
-    background-color: #008CBA;
+    background-color: #0f5107;
   
-    border: none;
+    border: solid 1px black;
   
     color: white;
   
@@ -147,7 +147,7 @@ body {
     position: absolute;
     
     bottom: 0;
-    
+
     margin-bottom: 20px;
   
   }
