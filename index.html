@@ -30,8 +30,8 @@ TO DO LIST:
 
   <div class="outer-container">
 
-    <h1>Handpan Practice Coach</h1>
-    <h2>Play Fresh. Play Spicy.</h2>
+    <h1>Handpan Improv Coach</h1>
+    <h2>To get those creative juices flowing.</h2>
     <h3>by @hang.with.jay</h3>
     <div id="socials">
       <!-- Facebook icon linked to your Facebook profile -->
@@ -49,6 +49,28 @@ TO DO LIST:
 
       <div class="box">
 
+        <p><span class="header">Melody</span></p>
+        <button id="melody-button">
+          Give me a melody
+        </button>
+        <br/><br/>
+        <div id="display-melody">
+          <span>Include these notes in your melody:</span><br/><br/>
+          <span class="item" id="random-melody"></span>
+        </div>
+
+      </div><!-- box -->
+
+      <div class="box">
+
+      </div><!-- box -->
+
+    </div><!-- container -->
+
+    <div class="container">
+
+      <div class="box">
+
         <p>
 
           <span class="header">Time Signature:</span>
@@ -59,7 +81,7 @@ TO DO LIST:
 
         </p>
 
-        <p><span class="countdown" id="signature-time"></span></p>
+        <p><span class="countdown" id="signature-time">03:00</span></p>
 
         <div class="progress-bar-container">
 
@@ -98,15 +120,11 @@ TO DO LIST:
   <p>
 
     <button id="start-button">
-
       Start
-
     </button>
 
     <button id="restart-button">
-
       Restart
-
     </button>
 
   </p>
@@ -118,6 +136,12 @@ TO DO LIST:
   </div><!-- outer-container -->
 
   <script src="main.js"></script>
+  <audio id="timeSignatureSound">
+    <source src="assets/sounds/future-alarm.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="styleSound">
+    <source src="assets/sounds/point-in-space.mp3" type="audio/mpeg">
+  </audio>
 </body>
 
 </html>

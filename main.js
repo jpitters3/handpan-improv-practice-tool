@@ -6,6 +6,10 @@ const styles = [
 
     'chord exploration',
 
+    'tonic pulse',
+
+    'melodic',
+
     'obscure sounds',
 
     'rhythmic break',
@@ -139,6 +143,17 @@ const styles = [
   }
 
 
+  function playTimeSignatureSound() {
+    const audio = document.getElementById("timeSignatureSound");
+    audio.play();
+  }
+
+  
+  function playStyleSound() {
+    const audio = document.getElementById("styleSound");
+    audio.play();
+  }
+
 
   function updateProgressBar() {
 
@@ -157,36 +172,25 @@ const styles = [
     
 
     // Adjust these values according to your needs
-
     const totalTime = styleTime; // Total time in seconds
 
-
-
-    // Update currentTime based on your specific logic or timekeeping function
-
-
-
     // Calculate the percentage of progress
-
     const progressPercentage = (currentTime / totalTime) * 100;
 
 
-
     // Update the width of the progress bar
-
     progressBar.style.width = `${progressPercentage}%`;
-
 
 
     // Change the color or add other visual effects as desired
 
     // For example, changing color based on progress
 
-    if (progressPercentage < 21) {
+    if (progressPercentage < 11) {
 
       progressBar.style.backgroundColor = 'red';
 
-    } else if (progressPercentage < 51) {
+    } else if (progressPercentage < 31) {
 
       progressBar.style.backgroundColor = 'orange';
 
@@ -203,14 +207,13 @@ const styles = [
     if (currentTime <= 0) {
 
       currentTime = styleTime;
+      playStyleSound();
 
       //clearInterval(progressInterval); // Stop the interval when progress is complete
 
     }
 
   }
-
-  
 
   function updateTimeSignatureProgressBar() {
 
@@ -224,7 +227,13 @@ const styles = [
 
     const signatureTimer = document.getElementById('signature-time');
 
-    signatureTimer.textContent = " " + currentSignatureTime;
+    // Display the time in "minutes:seconds" format
+    const minutes = Math.floor(currentSignatureTime / 60);
+    const seconds = currentSignatureTime % 60;
+    signatureTimer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+
+    // signatureTimer.textContent = " " + currentSignatureTime;
 
     
 
@@ -271,7 +280,7 @@ const styles = [
     if (currentSignatureTime <= 0) {
 
         currentSignatureTime = signatureTime;
-
+        playTimeSignatureSound();
       //clearInterval(progressInterval); // Stop the interval when progress is complete
 
     }
@@ -279,12 +288,10 @@ const styles = [
   }
 
 
+// Start the intervals when the Start button is clicked
+document.getElementById('start-button').addEventListener('click', function() {
 
-      // Start the intervals when the Start button is clicked
-
-  document.getElementById('start-button').addEventListener('click', function() {
-
-      styleInterval = setInterval(displayRandomStyle, styleTime*1000); // Update every second
+    styleInterval = setInterval(displayRandomStyle, styleTime*1000); // Update every second
 
     signatureInterval = setInterval(displayRandomTimeSignature, signatureTime*1000); // Update every second
 
@@ -304,8 +311,6 @@ const styles = [
 
     startInterval();
 
-    
-
     document.getElementById('start-button').style.display = 'none';
 
     document.getElementById('restart-button').style.display = 'block';
@@ -314,10 +319,25 @@ const styles = [
 
   });
 
-  
-
-  document.getElementById('restart-button').addEventListener('click', function() {
+// Restart button
+document.getElementById('restart-button').addEventListener('click', function() {
 
       location.reload();
 
   });
+
+// Create and display new melody
+document.getElementById('melody-button').addEventListener('click', function() {
+  // Picks 5 random numbers from 1-16 to create a new melody
+  const numbers = [];
+
+  for (let i = 0; i < 5; i++) {
+    const randomNum = Math.floor(Math.random() * 13) + 1;
+    numbers.push(randomNum);
+  }
+
+  // Display the 5 random numbers
+  console.log('Random numbers:', numbers);
+
+  document.getElementById('random-melody').textContent = numbers;
+});
