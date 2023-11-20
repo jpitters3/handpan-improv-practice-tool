@@ -152,7 +152,7 @@ body {
   
   button {
   
-    background-color: #69a83d;
+    background-color: rgb(142, 178, 87);
   
     border: solid 1px black;
   
@@ -176,5 +176,5 @@ body {
 
   button.action-button {
     color: black;
-    background-color: rgb(245, 164, 13);
+    background-color: rgb(191, 228, 135);
   }
