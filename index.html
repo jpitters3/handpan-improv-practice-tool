@@ -47,70 +47,60 @@ TO DO LIST:
 
     <div class="container">
 
+      <!-- Melody Box -->
       <div class="box">
-
         <p><span class="header">Melody</span></p>
-        <button id="melody-button">
+        <button class="action-button" id="melody-button">
           Give me a melody
         </button>
         <br/><br/>
         <div id="display-melody">
-          <span>Include these notes in your melody:</span><br/><br/>
-          <span class="item" id="random-melody"></span>
+          <span>Include these notes in your melody:</span>
+          <p><span class="item" id="random-melody"></span></p>
         </div>
-
       </div><!-- box -->
 
+      <!-- Vibe Mode Box-->
       <div class="box">
-
+        <p><span class="header">Vibe Mode</span></p>
+        <button class="action-button" id="pause-button">
+          Pause
+        </button>
+        <br/><br/>
+        <div>
+          <span>If you're really feeling what you're playing, just tell coach to chill for a moment.</span><br/><br/>
+          <span class="item" id="random-melody"></span>
+        </div>
       </div><!-- box -->
 
     </div><!-- container -->
 
     <div class="container">
 
+      <!-- Time Signature Box -->
       <div class="box">
-
         <p>
-
           <span class="header">Time Signature:</span>
-
           <br/><br/>
-
           <span class="item" id="random-signature"></span>
-
         </p>
-
         <p><span class="countdown" id="signature-time">03:00</span></p>
-
         <div class="progress-bar-container">
-
           <div id="signature-progress-bar" class="prog-bar"></div>
-
         </div><br/>
-
       </div><!-- box -->
 
+      <!-- Style Box -->
       <div class="box">
-
         <p>
-
           <span class="header">Playing Style:</span>
-
           <br/><br/>
-
           <span class="item" id="random-style"></span>
-
         </p>
-
         <p><span class="countdown" id="style-time"></span></p>
-
         <div class="progress-bar-container">
-
           <div id="progress-bar" class="prog-bar"></div>
-
         </div><br/>
-
       </div><!-- box -->
 
     </div><!-- container -->

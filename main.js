@@ -122,9 +122,9 @@ const styles = [
 
 
 
-  displayRandomStyle(); // Display a random word immediately
+  displayRandomStyle(); // Display a random playing style immediately
 
-  displayRandomTimeSignature();
+  displayRandomTimeSignature(); // Display a random time signature immediately
 
   
 
@@ -157,9 +157,7 @@ const styles = [
 
   function updateProgressBar() {
 
-      console.log(currentTime);
-
-
+    console.log(currentTime);
 
     const progressBar = document.getElementById('progress-bar');
 
@@ -217,9 +215,7 @@ const styles = [
 
   function updateTimeSignatureProgressBar() {
 
-      console.log(currentSignatureTime);
-
-
+    console.log(currentSignatureTime);
 
     const progressBar = document.getElementById('signature-progress-bar');
 
@@ -232,31 +228,16 @@ const styles = [
     const seconds = currentSignatureTime % 60;
     signatureTimer.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
-
-    // signatureTimer.textContent = " " + currentSignatureTime;
-
-    
-
     // Adjust these values according to your needs
-
     const totalTime = signatureTime; // Total time in seconds
 
-
-
     // Calculate the percentage of progress
-
     const progressPercentage = (currentSignatureTime / totalTime) * 100;
 
-
-
     // Update the width of the progress bar
-
     progressBar.style.width = `${progressPercentage}%`;
 
-
-
     // Change the color or add other visual effects as desired
-
     // For example, changing color based on progress
 
     if (progressPercentage < 4) {
@@ -273,10 +254,7 @@ const styles = [
 
     }
 
-
-
     // Check if the progress is complete
-
     if (currentSignatureTime <= 0) {
 
         currentSignatureTime = signatureTime;
@@ -307,7 +285,6 @@ document.getElementById('start-button').addEventListener('click', function() {
 
     }, 1000);
 
-    
 
     startInterval();
 
@@ -341,3 +318,17 @@ document.getElementById('melody-button').addEventListener('click', function() {
 
   document.getElementById('random-melody').textContent = numbers;
 });
+
+// Vibe Mode (Pause Button)
+document.getElementById('pause-button').addEventListener('click', function() {
+    var timerId, startTime, remaining = 0;
+    var state = 0; //  0 = idle, 1 = running, 2 = paused, 3= resumed
+
+    this.pause = function () {
+        if (state != 1) return;
+
+        remaining = interval - (new Date() - startTime);
+        window.clearInterval(timerId);
+        state = 2;
+    };
+  });
