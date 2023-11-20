@@ -70,7 +70,7 @@ const styles = [
 
   
 
-  const signatureTime = 60;
+  const signatureTime = 180;
 
   let currentSignatureTime = signatureTime;
 
@@ -250,11 +250,11 @@ const styles = [
 
     // For example, changing color based on progress
 
-    if (progressPercentage < 21) {
+    if (progressPercentage < 4) {
 
       progressBar.style.backgroundColor = 'red';
 
-    } else if (progressPercentage < 51) {
+    } else if (progressPercentage < 11) {
 
       progressBar.style.backgroundColor = 'orange';
 
@@ -268,9 +268,9 @@ const styles = [
 
     // Check if the progress is complete
 
-    if (currentTime <= 0) {
+    if (currentSignatureTime <= 0) {
 
-      currentTime = signatureTime;
+        currentSignatureTime = signatureTime;
 
       //clearInterval(progressInterval); // Stop the interval when progress is complete
 
