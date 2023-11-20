@@ -170,9 +170,11 @@ body {
   
   
   button#restart-button {
-  
     display: none;
-  
     color: black;
-  
+  }
+
+  button#melody-button {
+    color: black;
+    background-color: rgb(190, 126, 255);
   }
