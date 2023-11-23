@@ -21,6 +21,7 @@ TO DO LIST:
   <title>Handpan Practice Coach</title>
 
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="metronome-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -60,16 +61,21 @@ TO DO LIST:
         </div>
       </div><!-- box -->
 
-      <!-- Vibe Mode Box-->
+      <!-- Metronome Box -->
       <div class="box">
-        <p><span class="header">Vibe Mode</span></p>
-        <button class="action-button" id="pause-button">
-          Pause
+        <p><span class="header">Metronome</span></p>
+        <div>
+          <span class="arrow decrease-bpm">&#9664;</span>
+          <input class="bpm-input" type="number" min="1" max="400" value="120">
+          <span class="arrow increase-bpm">&#9654;</span>
+        </div>
+        <br/>
+        <button class="action-button" id="metronome-button">
+          Start
         </button>
         <br/><br/>
         <div>
-          <span>If you're really feeling what you're playing, just tell coach to chill for a moment.</span><br/><br/>
-          <span class="item" id="random-melody"></span>
+          <span class="item" id="bpm-display"></span>
         </div>
       </div><!-- box -->
 
@@ -126,6 +132,7 @@ TO DO LIST:
   </div><!-- outer-container -->
 
   <script src="main.js"></script>
+  <script src="metronome.js"></script>
   <audio id="timeSignatureSound">
     <source src="assets/sounds/future-alarm.mp3" type="audio/mpeg">
   </audio>
